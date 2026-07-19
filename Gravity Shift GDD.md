@@ -175,7 +175,7 @@ Gravity Shift busca transmitir una sensación de exploración, desafío y supera
 **Bocetos de Pantalla / UI**\
 Boceto del primer nivel donde se representa la distribución aproximada de plataformas, placas de gravedad, obstáculos, cofre, barrera y salida.\
 
-**![](Imagenes/concept_art.png)**
+**![](Imagenes/boceto_nivel1.png)**
 
 **Estilo Visual y Sonoro**
 
