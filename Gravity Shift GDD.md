@@ -6,7 +6,7 @@
 
 **Versión:** 0.0.1
 
-**Fecha de actualización:**
+**Fecha de actualización:** 19/7/2026
 
 **Ficha del Grupo**
 
@@ -18,7 +18,7 @@
 
    **Concept art generado durante la etapa de preproducción que representa la ambientación y el estilo visual propuesto para Gravity Shift.**
 
-![](Aspose.Words.45307780-3fe4-4c9d-a277-6bf963d0b92c.001.jpeg)
+![](imagenes/Aspose.Words.45307780-3fe4-4c9d-a277-6bf963d0b92c.001.jpeg)
 
 
 
@@ -175,7 +175,7 @@ Gravity Shift busca transmitir una sensación de exploración, desafío y supera
 **Bocetos de Pantalla / UI**\
 Boceto del primer nivel donde se representa la distribución aproximada de plataformas, placas de gravedad, obstáculos, cofre, barrera y salida.\
 
-**![](Aspose.Words.45307780-3fe4-4c9d-a277-6bf963d0b92c.002.png)**
+**![](imagenes/Aspose.Words.45307780-3fe4-4c9d-a277-6bf963d0b92c.002.png)**
 
 **Estilo Visual y Sonoro**
 
