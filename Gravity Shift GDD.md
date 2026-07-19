@@ -6,8 +6,8 @@
 
 **Versión:** 0.0.1
 
-**Fecha de actualización:**\
-\
+**Fecha de actualización:**
+
 **Ficha del Grupo**
 
 |**Apellido y Nombre Completo**|**Función dentro del grupo**|
@@ -24,14 +24,14 @@
 
 ## **2. Estructura Core del Proyecto**
 **2.1 Objetivo del Proyecto**\
-\
+
 Desarrollar un videojuego de plataformas 2D centrado en una mecánica de cambio de gravedad mediante placas distribuidas por los niveles. El objetivo es crear una experiencia donde el diseño de niveles sea el principal desafío, obligando al jugador a utilizar la gravedad para superar obstáculos y avanzar hasta la salida de la mazmorra.\
-\
+
 **2.2 Diseño e Investigación\
 Definición de la idea**
 
 Gravity Shift es un juego de plataformas 2D donde el jugador controla a un caballero atrapado en una antigua mazmorra. Para escapar deberá utilizar placas especiales que modifican la gravedad, permitiéndole caminar por paredes y techos para superar distintos desafíos.\
-\
+
 **Género**
 
 - Plataformas 2D 
@@ -115,7 +115,7 @@ El proyecto se centrará principalmente en la mecánica de cambio de gravedad y 
 
 # 3\. Diseño Detallado del Juego
 **3.1 Elementos del Juego**\
-\
+
 
 
 |**Elemento**|**Tipo**|**Descripción**|
@@ -129,8 +129,8 @@ El proyecto se centrará principalmente en la mecánica de cambio de gravedad y 
 |Barrera|Escenario|Bloquea el acceso a la salida hasta obtener la llave.|
 |Salida|Objetivo|Punto final del nivel al que se accede una vez abierta la barrera.|
 
-**3.2 Reglas**\
-\
+**3.2 Reglas**
+
 
 
 |**Regla**|**Descripción**|
@@ -150,11 +150,11 @@ El proyecto se centrará principalmente en la mecánica de cambio de gravedad y 
 **3.3 Descripción de una sesión de juego**
 
 El jugador inicia el nivel controlando al caballero en la entrada de la mazmorra. A medida que avanza, deberá superar plataformas y obstáculos utilizando las placas para cambiar la gravedad. Durante el recorrido encontrará un cofre que contiene la llave necesaria para desbloquear la barrera que protege la salida. Una vez obtenida la llave y abierta la barrera, podrá llegar a la salida y completar el nivel.\
-\
-**3.4 Estética y Experiencia del Jugador**\
-\
+
+**3.4 Estética y Experiencia del Jugador**
+
 Gravity Shift busca transmitir una sensación de exploración, desafío y superación. A medida que el jugador avanza por la mazmorra, deberá observar cuidadosamente el entorno y utilizar la mecánica de cambio de gravedad para resolver los distintos desafíos. La dificultad aumentará de forma progresiva, incentivando el aprendizaje constante y la satisfacción de superar cada nivel.\
-\
+
 **Estética visual**
 
 - Ambientación medieval. 
@@ -174,7 +174,7 @@ Gravity Shift busca transmitir una sensación de exploración, desafío y supera
 # 4\. Arte, Audio y Bocetos
 **Bocetos de Pantalla / UI**\
 Boceto del primer nivel donde se representa la distribución aproximada de plataformas, placas de gravedad, obstáculos, cofre, barrera y salida.\
-\
+
 **![](Aspose.Words.45307780-3fe4-4c9d-a277-6bf963d0b92c.002.png)**
 
 **Estilo Visual y Sonoro**
