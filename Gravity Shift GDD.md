@@ -16,6 +16,8 @@
 
 1. **High Concept y Visión Inicia**
 
+Desarrollar un videojuego de plataformas 2D de precisión basado en la manipulación dinámica de la gravedad en cuatro direcciones (arriba, abajo, izquierda y derecha). El objetivo es ofrecer una experiencia de diseño interconectado donde el jugador no solo debe superar obstáculos y enemigos, sino también gestionar estratégicamente recursos limitados —como los cambios de gravedad restringidos por zonas y los bloqueos de movimiento horizontal— para resolver puzles espaciales y encontrar la ruta de salida.
+
    **Concept art generado durante la etapa de preproducción que representa la ambientación y el estilo visual propuesto para Gravity Shift.**
 
 ![](Imagenes/concept_art.jpeg)
@@ -25,12 +27,12 @@
 ## **2. Estructura Core del Proyecto**
 **2.1 Objetivo del Proyecto**\
 
-Desarrollar un videojuego de plataformas 2D centrado en una mecánica de cambio de gravedad mediante placas distribuidas por los niveles. El objetivo es crear una experiencia donde el diseño de niveles sea el principal desafío, obligando al jugador a utilizar la gravedad para superar obstáculos y avanzar hasta la salida de la mazmorra.\
+Consolidar el desarrollo de Gravity Shift, un plataformas 2D donde la manipulación de la gravedad en tiempo real es la herramienta central de navegación y resolución de puzles dentro de un entorno de mazmorra interconectado.\
 
 **2.2 Diseño e Investigación\
 Definición de la idea**
 
-Gravity Shift es un juego de plataformas 2D donde el jugador controla a un caballero atrapado en una antigua mazmorra. Para escapar deberá utilizar placas especiales que modifican la gravedad, permitiéndole caminar por paredes y techos para superar distintos desafíos.\
+Definición de la idea: Gravity Shift sitúa al jugador en el rol de un caballero atrapado en una antigua mazmorra. A diferencia de un sistema estático, el jugador posee control directo sobre la orientación de la gravedad (ejes vertical y horizontal), debiendo sortear abismos, enemigos y zonas con reglas modificadas.\
 
 **Género**
 
@@ -48,13 +50,19 @@ Gravity Shift es un juego de plataformas 2D donde el jugador controla a un cabal
 
 Gravity Shift está orientado a jugadores de PC que disfrutan los juegos de plataformas y resolución de desafíos. Está dirigido principalmente a adolescentes y adultos jóvenes interesados en experiencias donde el diseño de niveles y una mecánica innovadora sean el principal atractivo.
 
-**Mecánicas principales**
+**Mecánicas principales actualizadas:**
 
-- Movimiento lateral. 
-- Salto. 
-- Cambio de gravedad mediante placas. 
-- Exploración. 
-- Resolución de obstáculos.
+Movimiento lateral y salto adaptados a la gravedad actual.
+
+Cambio de gravedad direccional en tiempo real (teclas de control vertical y horizontal).
+
+Zonas de gravedad restringida (límite de cambios permitidos antes de reiniciar al último checkpoint).
+
+Áreas de bloqueo de movimiento horizontal (desactivación de ciertas direcciones de gravedad según la zona).
+
+Sistema de checkpoints e interacción con objetos físicos (cajas, enemigos).
+
+Exploración de niveles ramificados e interconectados.
 
 **2.3 Concepto del Juego**
 
@@ -79,7 +87,7 @@ El jugador despierta dentro de una antigua mazmorra sin conocer cómo llegó all
 
 **2.6 Alcance del Proyecto**
 
-El proyecto se desarrollará en distintas etapas. La primera versión consistirá en un prototipo funcional independiente de los niveles finales, cuyo objetivo será probar y validar la mecánica principal de cambio de gravedad mediante placas.
+El proyecto evoluciona de un diseño puramente lineal a una estructura de niveles interconectados y ramificados (estilo mini-metroidvania), donde el jugador debe explorar distintas zonas, resolver puzles espaciales bajo restricciones específicas y volver sobre sus pasos para avanzar.
 
 **Primera versión: Prototipo funcional**
 
@@ -120,31 +128,27 @@ El proyecto se centrará principalmente en la mecánica de cambio de gravedad y 
 
 |**Elemento**|**Tipo**|**Descripción**|
 | :- | :- | :- |
-|Caballero|Personaje|Personaje controlado por el jugador. Debe escapar de la mazmorra utilizando las placas de gravedad.|
-|Placas de gravedad|Mecánica|Modifican la gravedad al ser activadas. Placa Roja: arriba/abajo. Placa Azul: izquierda/derecha.|
-|Plataformas|Escenario|Superficies por las que se desplaza el jugador.|
-|Obstáculos|Escenario|Peligros que dificultan el avance, como pinchos o vacíos.|
-|Cofre|Objeto|Contiene la llave necesaria para continuar el nivel.|
-|Llave|Objeto|Permite desbloquear la barrera que protege la salida.|
-|Barrera|Escenario|Bloquea el acceso a la salida hasta obtener la llave.|
-|Salida|Objetivo|Punto final del nivel al que se accede una vez abierta la barrera.|
+|Caballero|Personaje|Personaje controlado por el jugador. Capaz de rotar su orientación física según la gravedad activa para escapar de la mazmorra.|
+|Zonas de gravedad restringida|Mecánica|Áreas específicas donde el jugador cuenta con un número máximo de cambios de gravedad permitidos antes de reiniciar al checkpoint.|
+|Zonas de bloqueo|Mecánica|Áreas especiales que desactivan temporalmente ciertos inputs o ejes de gravedad (como el movimiento horizontal).|
+|Checkpoints|Escenario|Puntos de control que actualizan la posición de reaparición del jugador tras morir.|
+|Caja|Entidad|Objeto rígido interactivo que reacciona a la gravedad global y puede ser desplazado por el jugador.|
+|Enemigo|Entidad|Peligro móvil dentro del escenario que provoca la muerte inmediata al entrar en contacto con el jugador.|
+|Obstáculos|Escenario|Peligros fijos que dificultan el avance, como pinchos o vacíos mortales.|
+|Salida|Objetivo|Punto final del nivel al que se accede tras superar todas las restricciones de la zona.|
 
 **3.2 Reglas**
 
-
-
 |**Regla**|**Descripción**|
 | :- | :- |
-|Inicio del nivel|El jugador comienza cada nivel en un punto de inicio predeterminado dentro de la mazmorra.|
-|Movimiento|El jugador puede desplazarse hacia la izquierda y derecha, además de saltar para superar obstáculos.|
-|Cambio de gravedad|Al activar una placa de gravedad, la orientación de la gravedad cambia inmediatamente según el tipo de placa.|
-|Placa azul|Cambia la gravedad entre izquierda y derecha.|
-|Placa roja|Cambia la gravedad entre arriba y abajo.|
-|Obstáculos|Si el jugador toca un obstáculo peligroso (como pinchos) o cae al vacío, deberá reiniciar el nivel.|
-|Obtención de la llave|El jugador deberá abrir el cofre para conseguir la llave necesaria para desbloquear la barrera.|
-|Barrera|La barrera permanecerá cerrada hasta que el jugador obtenga la llave correspondiente.|
-|Victoria|El nivel se completa cuando el jugador atraviesa la salida después de abrir la barrera.|
-|Derrota|El jugador pierde al tocar un obstáculo mortal o caer fuera del escenario, reiniciando el nivel.|
+|Inicio del nivel|El jugador comienza cada nivel en un punto de inicio predeterminado (checkpoint inicial) dentro de la mazmorra.|
+|Movimiento y gravedad|El jugador puede desplazarse y saltar, alterando la dirección de la gravedad (arriba, abajo, izquierda y derecha) en tiempo real mediante comandos asignados.|
+|Restricción por zona|Al ingresar a ciertas zonas, el contador de cambios de gravedad se limita. Si se agotan los intentos permitidos, el jugador muere y reaparece en el checkpoint.|
+|Bloqueo de inputs|Algunas salas restringen específicamente el cambio de gravedad en el eje horizontal para forzar soluciones lógicas concretas.|
+|Interacción con objetos|Las cajas se desplazan y reaccionan de manera coherente según la orientación actual de la gravedad global del nivel.|
+|Obstáculos y enemigos|Tocar un enemigo, un obstáculo peligroso (como pinchos) o caer al vacío provoca la muerte instantánea del jugador.|
+|Sistema de reaparición|Al morir, el jugador reaparece automáticamente en el último checkpoint registrado y las cajas se restablecen a su posición original.|
+|Victoria|El nivel se completa cuando el jugador logra atravesar la salida tras superar todos los puzles espaciales de la mazmorra.|
 
 
 **3.3 Descripción de una sesión de juego**
